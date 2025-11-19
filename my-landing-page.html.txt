@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[YOUR WEBSITE NAME] - Join Free VIP</title>
+    <style>
+        /* General Styling and Color Scheme */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Dark Background */
+            color: #E0E0E0; /* Light Text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: #1e1e1e; /* Container Background */
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            text-align: center;
+            border-top: 5px solid #FFD700; /* Gold/Premium Border */
+        }
+
+        /* Heading and Title Styling */
+        .header h1 {
+            color: #FFD700; /* Gold Text */
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .header p {
+            color: #C0C0C0;
+            font-size: 1em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Proof Image Styling */
+        .proof-image img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border: 3px solid #333;
+        }
+
+        /* Main Claim (SURE SHOT) Styling */
+        .main-claim {
+            background-color: #380000; /* Dark Red/Urgency */
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Benefits List Styling */
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        .benefits li {
+            background-color: #2a2a2a;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            text-align: left;
+            font-size: 1.1em;
+            color: #FFFFFF;
+            border-left: 5px solid #FFD700;
+        }
+        .benefits li::before {
+            content: '✅';
+            margin-right: 10px;
+        }
+
+        /* CTA Button Styling */
+        .cta-button a {
+            display: block;
+            background-color: #0077B5; /* Telegram Blue */
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
+        }
+        .cta-button a:hover {
+            background-color: #005691;
+            transform: translateY(-2px);
+        }
+
+        /* Timer Styling */
+        .timer-box {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        #countdown {
+            color: #FF0000; /* Red for Urgency */
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        /* Important Note */
+        .important-note {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            color: #FFD700;
+        }
+
+        /* Animation */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+            50% { box-shadow: 0 0 15px rgba(255, 0, 0, 1); }
+            100% { box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>🌟 JALWA GAME NISHA 🌟</h1>
+            <p>Join the 100% Sure Shot VIP Channel</p>
+        </div>
+
+        <div class="proof-image">
+            <img src="[Place Your Winning Proof Image URL Here]" alt="Jalwa Game Nisha Winning Proof">
+        </div>
+
+        <div class="main-claim">
+            # 🔥 100% SURE SHOT NUMBER 🔥
+        </div>
+
+        <div class="benefits">
+            <h3>Why Join the Free VIP Channel?</h3>
+            <ul>
+                <li>✅ 100% Confirmed Sure Shots</li>
+                <li>✅ Chance for Complete Loss Recovery</li>
+                <li>✅ Special Free Gifts and Bonuses</li>
+            </ul>
+        </div>
+
+        <div class="timer-box">
+            ⏳ Limited Time Offer! Only <span id="countdown"></span>
+        </div>
+
+        <div class="cta-button">
+            <a href="[Place Your Telegram Channel Link Here]" target="_blank">
+                ✈ JOIN VIP Channel NOW
+            </a>
+        </div>
+
+        <div class="important-note">
+            ⚠ *IMPORTANT:* After clicking the link, make sure to tap the "JOIN" button inside the Telegram app!
+        </div>
+    </div>
+
+    <script>
+        // Start the timer at 10 seconds
+        let timeRemaining = 10;
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            // Display the time in seconds
+            let seconds = timeRemaining % 60;
+            let displayTime = ${seconds}s Left!;
+            
+            countdownElement.textContent = displayTime;
+
+            if (timeRemaining <= 0) {
+                // Actions when the timer ends
+                clearInterval(timerInterval);
+                countdownElement.textContent = 'Offer Ended!';
+            }
+
+            timeRemaining--;
+        }
+
+        // Update every 1 second
+        const timerInterval = setInterval(updateCountdown, 1000);
+
+        // Initial call to display 10s immediately
+        updateCountdown();
+    </script>
+
+</body>
+</html>
