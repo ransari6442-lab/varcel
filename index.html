@@ -45,14 +45,17 @@
         /* Proof Image Styling */
     /* **** PREMIUM SMALL CIRCLE STYLING START **** */
         .proof-image img {
-        @media (max-width: 768px) {
-    
-    /* 1. कंटेनर को कॉलम फ्लो (vertical flow) में बदलने के लिए */
-    .container {
-        display: flex !important; /* अगर यह पहले flex नहीं था, तो अब होगा */
-        flex-direction: column !important; 
-        align-items: center !important; 
-        padding: 10px !important; 
+     @media (max-width: 768px) {
+    /* सभी मुख्य लेआउट तत्वों को block display में बदलें */
+    .container, .box, .side-content, .offer-box {
+        display: block !important; /* इसे ब्लॉक बना दें */
+        float: none !important;     /* सुनिश्चित करें कि कोई float न हो */
+        width: 100% !important;     /* पूरी चौड़ाई दें */
+        box-sizing: border-box !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
     }
 
     /* 2. सभी मुख्य तत्वों को पूरी चौड़ाई देने के लिए */
@@ -237,6 +240,7 @@
 </body>
 
 </html>
+
 
 
 
