@@ -45,19 +45,32 @@
         /* Proof Image Styling */
     /* **** PREMIUM SMALL CIRCLE STYLING START **** */
         .proof-image img {
-          @media (max-width: 768px) {
+        @media (max-width: 768px) {
     
+    /* 1. कंटेनर को कॉलम फ्लो (vertical flow) में बदलने के लिए */
     .container {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 10px; 
+        display: flex !important; /* अगर यह पहले flex नहीं था, तो अब होगा */
+        flex-direction: column !important; 
+        align-items: center !important; 
+        padding: 10px !important; 
     }
 
+    /* 2. सभी मुख्य तत्वों को पूरी चौड़ाई देने के लिए */
     .box, .side-content, .offer-box { 
         width: 100% !important; 
-        margin: 10px 0; 
-        box-sizing: border-box; 
-        align-self: stretch; 
+        margin: 10px 0 !important; 
+        box-sizing: border-box !important; 
+        align-self: stretch !important; 
+    }
+    
+    /* 3. अगर कोई फ्लोटिंग (floating) तत्व हो, तो उसे हटा दें */
+    .box, .side-content, .offer-box {
+        float: none !important; 
+        display: block !important; 
+    }
+}
+    
+  
     }
 }
         }
@@ -224,6 +237,7 @@
 </body>
 
 </html>
+
 
 
 
